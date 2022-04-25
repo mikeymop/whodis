@@ -1,14 +1,17 @@
 package main
 
 import (
-	"log"
-
-	"github.com/mikeymop/whodis/qr"
-	"github.com/mikeymop/whodis/uns"
+	"github.com/mikeymop/whodis/cmd"
+	// "github.com/mikeymop/whodis/qr"
+	// "github.com/mikeymop/whodis/uns"
 )
 
 func main() {
-	log.Printf("Records for mikeymop.crypto %v", uns.ShowRecords("mikeymop.crypto"))
-	log.Printf("Address for mikeymop.x: %v", uns.ResolveAddress("mikeymop.x", "BTC"))
-	qr.Generate(uns.ResolveAddress("mikeymop.crypto", "ETH"))
+	// addr := "mikeymop.x"
+	// log.Printf("Records for %s %v", addr, uns.ShowRecords(addr))
+	// log.Printf("Address for %s: %s", addr, uns.ResolveAddress(addr, "ETH"))
+	// qr.Generate(uns.ResolveAddress(addr, "ETH"))
+
+	cmd.RootCmd.Execute()
+
 }
